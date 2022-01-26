@@ -43,29 +43,30 @@ public class SoccerTeam {
     public static int getNumGoals(){
         return numGoals;
     }
-//    public static int startTournament(){
-//
-//    }
+    public static void startTournament(){
+        numGoals=0;
+        numGames=0;
+    }
 
     public static void main(String[] args) {
-        SoccerTeam tiger = new SoccerTeam();
         SoccerTeam dolphin = new SoccerTeam();
-        SoccerTeam pats = new SoccerTeam();
+        SoccerTeam tiger = new SoccerTeam();
         SoccerTeam bucaneers = new SoccerTeam();
+        SoccerTeam pats = new SoccerTeam();
 
         startTournament();
         System.out.println("Tournament 1");
-        tiger.played(dolphin,6,7);
-        dolphin.played(pats,6,6);
-        pats.played(bucaneers,9,10);
-        bucaneers.played(dolphin,5,4);
+        dolphin.played(tiger,5,8);
+        tiger.played(bucaneers,8,2);
+        pats.played(dolphin,10,14);
+        bucaneers.played(pats,3,1);
 
-        System.out.println("Tigers point:"+tiger.getPoints());
-        System.out.println("Pats point:"+pats.getPoints());
-        System.out.println("Dolphin point:"+dolphin.getPoints());
-        System.out.println("Bucaneers point:"+bucaneers.getPoints());
-        System.out.println("Total Games:"+getNumGames());
-        System.out.println("Total Goals:"+getNumGoals());
+        System.out.println("Tiger's points are "+tiger.getPoints());
+        System.out.println("Pats' points are "+pats.getPoints());
+        System.out.println("Dolphin's points are "+dolphin.getPoints());
+        System.out.println("Bucaneers' points are "+bucaneers.getPoints());
+        System.out.println("Total Games played are "+getNumGames());
+        System.out.println("Total Goals scored are "+getNumGoals());
 
         dolphin.reset();
         tiger.reset();
@@ -76,16 +77,30 @@ public class SoccerTeam {
 
         System.out.println("Tournament 2");
 
-        tiger.played(dolphin,8,7);
-        dolphin.played(pats,6,12);
-        pats.played(bucaneers,7,10);
-        bucaneers.played(dolphin,5,19);
+        dolphin.played(tiger,9,4);
+        tiger.played(bucaneers,7,12);
+        pats.played(dolphin,3,17);
+        bucaneers.played(pats,6,9);
 
-        System.out.println("Tigers point:"+tiger.getPoints());
-        System.out.println("Pats point:"+pats.getPoints());
-        System.out.println("Dolphin point:"+dolphin.getPoints());
-        System.out.println("Bucaneers point:"+bucaneers.getPoints());
-        System.out.println("Total Games:"+getNumGames());
-        System.out.println("Total Goals:"+getNumGoals());
+        System.out.println("Tiger's points are "+tiger.getPoints());
+        System.out.println("Pats' points are "+pats.getPoints());
+        System.out.println("Dolphin's point are "+dolphin.getPoints());
+        System.out.println("Bucaneers' point are "+bucaneers.getPoints());
+        System.out.println("Total Games played are "+getNumGames());
+        System.out.println("Total Goals scored are "+getNumGoals());
     }
 }
+//        Tournament 1
+//        Tiger's points are 6
+//        Pats' points are 0
+//        Dolphin's points are 3
+//        Bucaneers' points are 3
+//        Total Games played are 4
+//        Total Goals scored are 51
+//        Tournament 2
+//        Tiger's points are 0
+//        Pats' points are 3
+//        Dolphin's point are 6
+//        Bucaneers' point are 3
+//        Total Games played are 4
+//        Total Goals scored are 67

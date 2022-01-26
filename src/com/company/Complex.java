@@ -40,14 +40,19 @@ public class Complex {
         Complex c= new Complex(a,b);
         return c;
     }
-    //multiply(double s)
+    public Complex multiply(double s){
+        double a=s*x;
+        double b=s*y;
+        Complex c= new Complex(a,b);
+        return c;
+    }
     public static void main(String[] args) {
-        Complex s= new Complex(3.0,4.0);
-        Complex t= new Complex(5.0,8.0);
-        Complex c1= new Complex(7.0,9.0);
-        Complex c2= new Complex(-9.0,8.0);
-        Complex c3= new Complex(12.0,-8.0);
-        Complex c4= new Complex(13.0,17.0);
+        Complex s= new Complex(4.0,8.0);
+        Complex t= new Complex(2.0,9.0);
+        Complex c1= new Complex(3.0,7.0);
+        Complex c2= new Complex(-8.0,3.0);
+        Complex c3= new Complex(16.0,-4.0);
+        Complex c4= new Complex(12.0,19.0);
         System.out.println(s.abs());
         System.out.println(t.abs());
         System.out.println(s.multiply(t));
@@ -59,3 +64,12 @@ public class Complex {
         System.out.println(c4.add(2.0));
     }
 }
+//        8.94427190999916
+//        9.219544457292887
+//        9.0+52.0i
+//        -28.0+-47.0i
+//        215.0+256.0i
+//        28.0+15.0i
+//        6.0+17.0i
+//        -5.0+10.0i
+//        14.0+19.0i
